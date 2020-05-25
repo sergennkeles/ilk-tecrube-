@@ -1,0 +1,37 @@
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Hipotenüs Hesaplama</title>
+</head>
+
+<body>
+
+    <p>Hipotenüs Hesaplaması için pisagor teoreminden yararlanılır. Pisagor teoremi formülü h<sup>2</sup>=b<sup>2</sup>
+        + c<sup>2</sup> dir.
+    </p><br>
+    b değerini giriniz: <input type="text" id="b"> <br>
+    c değerini giriniz: <input type="text" id="c"> <br>
+    <button id="btnhesap" onclick="hesapla()">Hesapla</button>
+    <label for="sonuc">Sonuç:</label> <div id="sonuc"></div>
+   
+
+    <script>
+
+        function hesapla() {
+            var bkenari = Number(document.getElementById('b').value);
+            var ckenari = Number(document.getElementById('c').value);
+            var hipotenus;
+
+            hipotenus = Math.sqrt((bkenari * bkenari) + (ckenari * ckenari));
+           document.getElementById('sonuc').innerHTML=hipotenus;
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>
