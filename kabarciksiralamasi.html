@@ -1,0 +1,52 @@
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kabarcık Sıralaması (bubble Sort)</title>
+</head>
+<body>
+    
+    <script>
+        var sayac=0;
+        var dizi=[];
+        
+
+        while (sayac<10) {
+            var random=Math.floor(Math.random()*50);
+            if(dizi.indexOf(random)==-1)
+            {
+                dizi.push(random);
+                sayac++;
+            }
+        }
+        console.log(dizi[9]);
+        
+        document.write(dizi + " dizisi  ");
+        var karsilastir=0;
+
+        for (let i = 0; i < dizi.length; i++) {
+            
+         var sirali=1;
+         for (let j = dizi.length-1; j >0; j--) {
+            if (dizi[j-1]>dizi[j]) {
+                sirali=0;
+                karsilastir=dizi[j-1];
+                dizi[j-1]=dizi[j];
+                dizi[j]=karsilastir;
+                
+            }
+             
+         }
+         if (sirali) {
+       
+            break;
+
+        }
+        }
+  
+
+        document.write(dizi + " şeklinde küçükten büyüğe sıralanmıştır.");
+
+    </script>
+</body>
+</html>
