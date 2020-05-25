@@ -1,0 +1,56 @@
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Max ve Min Sayı ( Dizi ile )</title>
+</head>
+
+<body>
+
+    <button id="sayiUret" onclick="sayiUret()">Sayı Üret</button>
+    <span id="sayilar"></span>
+    <div id="sonuc"></div>
+    <script>
+
+
+
+        function sayiUret() {
+            var dizi = [];
+            var max=0, min=100, sayac = 0;
+            while (sayac < 10) {
+                var random = Math.floor(Math.random() * 100);
+                if (dizi.indexOf(random) == -1) {
+                    dizi.push(random);
+                    sayac++;
+                    console.log(dizi);
+
+                }
+
+            }
+            document.getElementById('sayilar').innerHTML = dizi;
+/* 
+            min=dizi[0];
+            max=dizi[0];  max ve min sayıyı bulmak için iki yol var. birincisi max ve min değişkenlerini dizinin herhangi bir elemanına eşitlemek.
+            burada dizinin 0. elemanına eşitledik. sonra aşağıdaki for döngüsü ile dizi içindeki elemanları sırasıyla max ve min değerleri ile
+            karşılaştırdık. Diğer yol ise max ve min değişkenlerini tanımlarken max değişkenine 0 min değişkenine ise 100 (random değişkeninden gelen
+            sayı kadar) verdik. yine aşağıdaki for döngüsü ile işlemleri yaptırdık. */
+        
+            for (let i = 0; i< dizi.length; i++) {
+                if (min>dizi[i]) {
+                    min=dizi[i];
+                    
+                }
+                if (max<dizi[i]) {
+                    max=dizi[i];
+                    
+                }
+            }
+            document.getElementById('sonuc').innerHTML=("Dizideki en büyük sayı: " + max + "<br>" + " Dizideki en küçük sayı: " + min );
+        
+        }
+
+    </script>
+</body>
+
+</html>
