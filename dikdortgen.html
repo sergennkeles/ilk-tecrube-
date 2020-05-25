@@ -1,0 +1,29 @@
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dikdörtgen hesabı</title>
+</head>
+<body>
+    Kısa Kenarı Girin: <input type="text" id="kisa"><br>
+    Uzun Kenarı Girin: <input type="text" id="uzun">
+    <button onclick="hesapla()"> Hesapla </button>
+    <div id="sonuc"></div>
+
+    <script>
+
+        function hesapla(a,b) {
+          a=Number(document.getElementById('kisa').value);
+           b=Number(document.getElementById('uzun').value);
+            var alan=a*b;
+            var cevre=(a+b)*2;
+
+           console.log(alan);
+           console.log(cevre);
+           document.getElementById('sonuc').innerHTML="Dikdörtgenin alanı: " + alan + "<br>" + "Dikdörtgenin çevresi: " +cevre;
+        }
+        
+
+    </script>
+</body>
+</html>
