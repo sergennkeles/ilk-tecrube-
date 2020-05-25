@@ -1,1 +1,2 @@
-# ilk-tecrube-
+# ilk-tecrube- 
+yanlışım varsa düzeltin :)
