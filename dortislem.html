@@ -1,0 +1,51 @@
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch case ile dört işlem</title>
+</head>
+
+<body>
+    1.Sayı: <input type="text" id="sayi1"><br>
+    2.Sayı: <input type="text" id="sayi2"><br>
+    İşlem: <select name="" id="islemsec">
+        <option value="topla">Toplama</option>
+        <option value="cikar">Çıkarma</option>
+        <option value="carp">Çarpma</option>
+        <option value="bol">Bölme</option>
+    </select>
+    <button id="hesap">Hesapla</button><br>
+    <div id="sonuc"></div>
+
+    <script>
+
+        hesap.onclick = function () {
+            var hesap = document.getElementById('hesap');
+            var islem = document.getElementById('islemsec').value;
+            var s1 = Number(document.getElementById('sayi1').value);
+            var s2 = Number(document.getElementById('sayi2').value);
+            var sonuc;
+
+            switch (islem) {
+                case 'topla': sonuc = s1 + s2;
+                    document.getElementById('sonuc').innerHTML = sonuc;
+                    break;
+                case 'cikar': sonuc = s1 - s2;
+                    document.getElementById('sonuc').innerHTML = sonuc;
+                    break;
+                case 'carp': sonuc = s1 * s2;
+                    document.getElementById('sonuc').innerHTML = sonuc;
+                    break;
+                case 'bol': sonuc = s1 / s2;
+                    document.getElementById('sonuc').innerHTML = sonuc;
+                    break;
+                default:
+                    break;
+            }
+        }
+
+    </script>
+</body>
+
+</html>
